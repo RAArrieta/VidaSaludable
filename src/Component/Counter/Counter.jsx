@@ -1,29 +1,27 @@
 import { useState } from "react"
 
-const Counter = ({ejercicio}) => {
+const Counter = ({ estado }) => {
 
-    const [state, setState]=useState (1)
+  const [state, setState] = useState(estado)
 
-    const onSerie = () => console.log(`Ver Series ${ejercicio.estado}`)
-    const onAddId = () => console.log(state)
-    const onSubstractId = () => console.log(`Restar Id ${ejercicio.estado}`)
+  const onAddId = () => {
+    state < 4 && setState(state + 1)
+  };
 
-    
+  const onSubstractId = () => {
+    state > 1 && setState(state - 1)
+  }
 
-    return (
-        <div>
-            <button onClick={onSerie} className="btnOpcEjercicios">
-                Series
-            </button>
-            <button onClick={onAddId} className="btnOpcEjercicios">
-                Ok
-            </button>
-            <button onClick={onSubstractId} className="btnOpcEjercicios">
-                Volver
-            </button>
-        </div>
-    )
+  return (
+    <div>
+      <button onClick={onAddId} className="btnOpcEjercicios btnOk">
+        Ok
+      </button>
+      <button onClick={onSubstractId} className="btnOpcEjercicios btnBack">
+        Back
+      </button>
+    </div>
+  )
 }
 
-export default Counter
-
+export default Counter;
