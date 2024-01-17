@@ -22,14 +22,17 @@ const Ejercicio = ({ id, estado }) => {
                 <div>{`${id}`}</div>
             </button>
             {ejercicioOn && (
-                <div className={ejercicioOn ? "dataSerie" : ""}>
-                    <div className="diaEstado">Día {`${estado}`}</div>
-                    <button onClick={handleToggleOnSerie} className="btnOpcEjercicios btnSerie">
-                        Series
-                    </button>
-                    <Counter id={id} estado={estado} />
-                    <div className="despliegueSerie">{(serieOn) && (<Series id={id} estado={estado} />)}</div>
+                <div>
+                    <div className={ejercicioOn ? (serieOn ? "dataSerie2" : "dataSerie") : ""}>
+                        <div className="diaEstado">Día {`${estado}`}</div>
+                        <button onClick={handleToggleOnSerie} className="btnOpcEjercicios btnSerie">
+                            Series
+                        </button>
+                        <Counter id={id} estado={estado} />
+                    </div>
+                   {(serieOn) && (<Series id={id} estado={estado} />)}
                 </div>
+
             )}
         </div>
     );

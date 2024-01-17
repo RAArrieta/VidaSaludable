@@ -11,14 +11,14 @@ const Series = ({ id, estado }) => {
     const serieS = serieSent.find((el) => el.id === estado.toString());
 
     return (
-        <div>
+        <div className="despliegueSerie">
             {
                 (id === "Correr") && (
                     <>
-                        <div>
+                        <div className="tabla">
                             {`Carrera: ${serieC.Carrera}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Marcha: ${serieC.Marcha}`}
                         </div>
                     </>
@@ -27,19 +27,19 @@ const Series = ({ id, estado }) => {
             {
                 (id === "Abdominales") && (
                     <>
-                        <div>
+                        <div className="tabla">
                             {`Serie 1: ${serieA.S1}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 2: ${serieA.S2}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 3: ${serieA.S3}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 4: ${serieA.S4}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 5: ${serieA.S5}`}
                         </div>
                     </>
@@ -48,19 +48,19 @@ const Series = ({ id, estado }) => {
             {
                 (id === "Flexiones y Glute Bridge") && (
                     <>
-                        <div>
+                        <div className="tabla">
                             {`Serie 1: ${serieF.S1}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 2: ${serieF.S2}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 3: ${serieF.S3}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 4: ${serieF.S4}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 5: ${serieF.S5}`}
                         </div>
                     </>
@@ -69,19 +69,19 @@ const Series = ({ id, estado }) => {
              {
                 (id === "Sentadillas y Estocadas") && (
                     <>
-                        <div>
+                        <div className="tabla">
                             {`Serie 1: ${serieS.S1}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 2: ${serieS.S2}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 3: ${serieS.S3}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 4: ${serieS.S4}`}
                         </div>
-                        <div>
+                        <div className="tabla">
                             {`Serie 5: ${serieS.S5}`}
                         </div>
                     </>

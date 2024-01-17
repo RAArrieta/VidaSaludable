@@ -13,14 +13,14 @@ const Counter = ({ estado }) => {
   }
 
   return (
-    <div>
-      <button onClick={onAddId} className="btnOpcEjercicios btnOk">
+    <>
+      <button onClick={onAddId} className="btnOpcEjercicios">
         Ok
       </button>
-      <button onClick={onSubstractId} className="btnOpcEjercicios btnBack">
+      <button onClick={onSubstractId} className="btnOpcEjercicios">
         Back
       </button>
-    </div>
+    </>
   )
 }
 
