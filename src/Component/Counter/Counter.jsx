@@ -1,24 +1,40 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import UpDateState from "../UpDate/UpDateState";
+import { DataContext } from "../DataContext/DataContext";
 
-const Counter = ({ estado }) => {
+const Counter = ({ id, estadoContador, onCounterChange }) => {
 
-  const [state, setState] = useState(estado)
+  const [newState, setNewState] = useState(estadoContador);
+  const { serieCorrer, serieAbd, serieFlex, serieSent } = useContext(DataContext)
+
+  console.log(serieCorrer)
+  console.log(serieFlex)
+  console.log(serieSent)
+  console.log(serieAbd)
 
   const onAddId = () => {
-    state < 4 && setState(state + 1)
+    (id === "Correr" & newState < serieCorrer.length) && setNewState(newState + 1);
+    (id === "Flexiones y Glute Bridge" & newState < serieFlex.length) && setNewState(newState + 1);
+    (id === "Sentadillas y Estocadas" & newState < serieSent.length) && setNewState(newState + 1);
+    (id === "Abdominales" & newState < serieAbd.length) && setNewState(newState + 1);
   };
 
   const onSubstractId = () => {
-    state > 1 && setState(state - 1)
+    newState > 1 && setNewState(newState - 1)
   }
+
+  useEffect(() => {
+    UpDateState(id, newState);
+    onCounterChange(newState);
+  }, [id, newState, onCounterChange]);
 
   return (
     <>
-      <button onClick={onAddId} className="btnOpcEjercicios">
-        Ok
-      </button>
       <button onClick={onSubstractId} className="btnOpcEjercicios">
         Back
+      </button>
+      <button onClick={onAddId} className="btnOpcEjercicios">
+        Ok
       </button>
     </>
   )

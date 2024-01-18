@@ -5,16 +5,20 @@ import Series from "./Series";
 
 const Ejercicio = ({ id, estado }) => {
     const [ejercicioOn, setEjercicioOn] = useState(false);
+    const [serieOn, setSerieOn] = useState(false);
+    const [estadoContador, setEstadoContador] = useState(estado);
 
     const handleToggle = () => {
         setEjercicioOn(!ejercicioOn);
     };
 
-    const [serieOn, setSerieOn] = useState(false)
-
     const handleToggleOnSerie = () => {
         setSerieOn(!serieOn)
     }
+
+    const handleCounterChange = (newState) => {
+        setEstadoContador(newState);
+      };
 
     return (
         <div>
@@ -24,13 +28,13 @@ const Ejercicio = ({ id, estado }) => {
             {ejercicioOn && (
                 <div>
                     <div className={ejercicioOn ? (serieOn ? "dataSerie2" : "dataSerie") : ""}>
-                        <div className="diaEstado">Día {`${estado}`}</div>
+                        <div className="diaEstado">Día {`${estadoContador}`}</div>
                         <button onClick={handleToggleOnSerie} className="btnOpcEjercicios btnSerie">
                             Series
                         </button>
-                        <Counter id={id} estado={estado} />
+                        <Counter id={id} estadoContador={estadoContador} onCounterChange={handleCounterChange} />
                     </div>
-                   {(serieOn) && (<Series id={id} estado={estado} />)}
+                   {(serieOn) && (<Series id={id} estadoContador={estadoContador} />)}
                 </div>
 
             )}

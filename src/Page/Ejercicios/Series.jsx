@@ -1,14 +1,19 @@
 import { useContext } from "react"
 import { DataContext } from "../../Component/DataContext/DataContext"
 
-const Series = ({ id, estado }) => {
+const Series = ({ id, estadoContador }) => {
 
     const { serieCorrer, serieAbd, serieFlex, serieSent } = useContext(DataContext)
 
-    const serieC = serieCorrer.find((el) => el.id === estado.toString());
-    const serieA = serieAbd.find((el) => el.id === estado.toString());
-    const serieF = serieFlex.find((el) => el.id === estado.toString());
-    const serieS = serieSent.find((el) => el.id === estado.toString());
+    const serieC = serieCorrer.find((el) => el.id === estadoContador.toString());
+    const serieA = serieAbd.find((el) => el.id === estadoContador.toString().padStart(2, '0'));
+    const serieF = serieFlex.find((el) => el.id === estadoContador.toString().padStart(2, '0'));
+    const serieS = serieSent.find((el) => el.id === estadoContador.toString());
+
+    console.log(typeof estadoContador)
+    console.log(estadoContador)
+
+    console.log(serieAbd[0].id) 
 
     return (
         <div className="despliegueSerie">
