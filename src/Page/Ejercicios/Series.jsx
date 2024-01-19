@@ -10,11 +10,6 @@ const Series = ({ id, estadoContador }) => {
     const serieF = serieFlex.find((el) => el.id === estadoContador.toString().padStart(2, '0'));
     const serieS = serieSent.find((el) => el.id === estadoContador.toString());
 
-    console.log(typeof estadoContador)
-    console.log(estadoContador)
-
-    console.log(serieAbd[0].id) 
-
     return (
         <div className="despliegueSerie">
             {

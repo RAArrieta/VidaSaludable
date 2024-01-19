@@ -11,10 +11,16 @@ const FetchEjercicios = () => {
         const ejerciciosRef = collection(data, "Ejercicios");
         getDocs(ejerciciosRef).then((resp) => {
             const ejerciciosData = resp.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-            setEjercicios(ejerciciosData);
+            
+            if (ejerciciosData.length > 0) {
+                const primerEjercicio = ejerciciosData.shift();
+                setEjercicios([...ejerciciosData, primerEjercicio]);
+            } else {
+                setEjercicios(ejerciciosData);
+            }
         });
     }, []);
-
+    
   return ejercicios;
 }
 
