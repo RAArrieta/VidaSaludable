@@ -29,7 +29,7 @@ const Ejercicio = ({ id, estado }) => {
                 <div>
                     <div className={ejercicioOn ? (serieOn ? "dataSerie2" : "dataSerie") : ""}>
                         <div className="diaEstado">Día {`${estadoContador}`}</div>
-                        <button onClick={handleToggleOnSerie} className="btnOpcEjercicios btnSerie">
+                        <button onClick={handleToggleOnSerie} className="btnOpcEjercicios">
                             Series
                         </button>
                         <Counter id={id} estadoContador={estadoContador} onCounterChange={handleCounterChange} />
