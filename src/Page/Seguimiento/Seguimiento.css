@@ -73,9 +73,6 @@
     border-radius: 30px;
   }
 
-
-
-
 /* FORMA DE TABLA DE SERIES */
 .tablaSeguimiento {
     border: solid 1px black;
@@ -86,3 +83,11 @@
     word-spacing: 10px;
 }
 
+/* CUADRO NEW SEGUIMIENTO */
+.formNewSeguimiento {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

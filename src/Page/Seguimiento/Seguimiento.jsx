@@ -1,59 +1,33 @@
 import "./Seguimiento.css";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import DetalleSeguimiento from "./DetalleSeguimiento";
 import OpcionesSeguimiento from "./OpcionesSeguimiento";
+import { DataContext } from "../../Component/DataContext/DataContext";
+import FormNewSeguimiento from "./FormNewSeguimiento";
 
 const Seguimiento = () => {
 
   const [seguimientoOn, setSeguimientoOn] = useState(false);
+  const { seguimiento } = useContext(DataContext);
+  const [formOn, setFormOn] = useState (false);
 
-  const handleOpcSeguimiento = () => {
-    setSeguimientoOn(!seguimientoOn)
-  }
+  const [seguimientoActual, setSeguimientoActual] = useState(null);
+
+  useEffect(() => {
+    setSeguimientoActual(seguimiento.length > 0 ? seguimiento[seguimiento.length - 1] : null);
+  }, [seguimiento]);
+  console.log(formOn)
 
   return (
     <div className="seguimiento">
-      <button className="btnSeguimiento" onClick={handleOpcSeguimiento}>
+      <button className="btnSeguimiento" onClick={() => setSeguimientoOn(!seguimientoOn)}>
         <div>Seguimiento</div>
       </button>
-      <OpcionesSeguimiento seguimientoOn={seguimientoOn} />
-      <DetalleSeguimiento />
+      <OpcionesSeguimiento seguimientoOn={seguimientoOn} seguimientoActual={seguimientoActual} setSeguimientoActual={setSeguimientoActual} formOn={formOn} setFormOn={setFormOn} />
+      {formOn && <FormNewSeguimiento />}
+      <DetalleSeguimiento seguimientoActual={seguimientoActual} />
     </div>
   );
 };
 
 export default Seguimiento
-
-
-
-
-
-
-
-
-
-// import React, { useState } from "react";
-// import DetalleSeguimiento from "./DetalleSeguimiento";
-// import OpcionesSeguimiento from "./OpcionesSeguimiento";
-
-// import "./Seguimiento.css"; // Asegúrate de importar los estilos
-
-// const Seguimiento = () => {
-//   const [seguimientoOn, setSeguimientoOn] = useState(false);
-
-//   return (
-//     <div className="seguimiento-container"> {/* Asegúrate de que la clase sea correcta */}
-//       <button className="btnSeguimiento" onClick={() => setSeguimientoOn(!seguimientoOn)}>
-//         <div>Seguimiento</div>
-//       </button>
-//       <OpcionesSeguimiento seguimientoOn={seguimientoOn} />
-//       <DetalleSeguimiento seguimientoOn={seguimientoOn} />
-//     </div>
-//   );
-// };
-
-// export default Seguimiento;
-
-
-
-
