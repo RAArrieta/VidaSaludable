@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { DataContext } from "../../Component/DataContext/DataContext";
-import FormNewSeguimiento from "./FormNewSeguimiento";
 
 const OpcionesSeguimiento = ({ seguimientoOn, seguimientoActual, setSeguimientoActual, formOn, setFormOn }) => {
 
@@ -20,7 +19,6 @@ const OpcionesSeguimiento = ({ seguimientoOn, seguimientoActual, setSeguimientoA
     }
     const btnCargarSeguimiento = () => {
         setFormOn(!formOn)
-        FormNewSeguimiento();
     }
 
     return (

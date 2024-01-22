@@ -1,15 +1,41 @@
+import { doc, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { DataContext } from "../../Component/DataContext/DataContext";
 
-const FormNewSeguimiento = () => {
+const FormNewSeguimiento = ({ formOn, setFormOn, setSeguimientoActual }) => {
 
-  const {register, handleSubmit} = useForm ();
+  const { seguimiento } = useContext(DataContext);
 
-  const enviar = (data)=>{
-    console.log(data)
-  }
+  const { register, handleSubmit } = useForm();
+
+  const enviar = async (newSeguimiento) => {
+    try {
+      const nuevoId = seguimiento.length > 0 ? (Number(seguimiento[seguimiento.length - 1].id) + 1).toString().padStart(3, '0') : 1
+
+      const data = getFirestore();
+
+      const seguimientoConFecha = {
+        ...newSeguimiento,
+        Fecha: serverTimestamp(),
+      };
+
+      // Crear una referencia al documento con el ID deseado
+      const seguimientoDocRef = doc(data, "Seguimiento", nuevoId.toString());
+
+      // Establecer el documento con los datos
+      await setDoc(seguimientoDocRef, seguimientoConFecha);
+
+      console.log("Datos enviados a Firebase correctamente");
+      setFormOn(!formOn);
+
+    } catch (error) {
+      console.error("Error al enviar datos a Firebase:", error);
+    }
+  };
 
   return (
-    <form className="formNewSeguimiento" onSubmit={handleSubmit (enviar)}>
+    <form className="formNewSeguimiento" onSubmit={handleSubmit(enviar)}>
 
 
       <input type="text" placeholder="Ingrese su peso..." {...register("Peso")} required />
@@ -20,7 +46,6 @@ const FormNewSeguimiento = () => {
       <button type="submit">Ingresar</button>
 
     </form>
-
   )
 }
 

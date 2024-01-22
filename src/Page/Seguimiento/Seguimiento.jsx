@@ -16,7 +16,6 @@ const Seguimiento = () => {
   useEffect(() => {
     setSeguimientoActual(seguimiento.length > 0 ? seguimiento[seguimiento.length - 1] : null);
   }, [seguimiento]);
-  console.log(formOn)
 
   return (
     <div className="seguimiento">
@@ -24,7 +23,7 @@ const Seguimiento = () => {
         <div>Seguimiento</div>
       </button>
       <OpcionesSeguimiento seguimientoOn={seguimientoOn} seguimientoActual={seguimientoActual} setSeguimientoActual={setSeguimientoActual} formOn={formOn} setFormOn={setFormOn} />
-      {formOn && <FormNewSeguimiento />}
+      {(formOn) && <FormNewSeguimiento formOn={formOn} setFormOn={setFormOn} setSeguimientoActual={setSeguimientoActual}/>}
       <DetalleSeguimiento seguimientoActual={seguimientoActual} />
     </div>
   );
