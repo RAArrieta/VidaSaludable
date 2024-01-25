@@ -7,11 +7,6 @@ const Counter = ({ id, estadoContador, onCounterChange }) => {
   const [newState, setNewState] = useState(estadoContador);
   const { serieCorrer, serieAbd, serieFlex, serieSent } = useContext(DataContext)
 
-  console.log(serieCorrer)
-  console.log(serieFlex)
-  console.log(serieSent)
-  console.log(serieAbd)
-
   const onAddId = () => {
     (id === "Correr" & newState < serieCorrer.length) && setNewState(newState + 1);
     (id === "Flexiones y Glute Bridge" & newState < serieFlex.length) && setNewState(newState + 1);

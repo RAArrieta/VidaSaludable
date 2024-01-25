@@ -2,7 +2,6 @@ import data from "../Firebase/Config";
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
-
 const FetchSeguimiento = () => {
 
     const [seguimiento, setSeguimiento] = useState([]);
@@ -15,7 +14,7 @@ const FetchSeguimiento = () => {
         });
     }, []);
 
-    return seguimiento;
+    return [seguimiento, setSeguimiento];
 }
 
 export default FetchSeguimiento

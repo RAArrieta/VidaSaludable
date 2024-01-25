@@ -2,4 +2,79 @@
     /* TAMAÑO DE HOME Y COLOR DE FONDO */
     width: 720px;
     height: 1560px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnComidaSemanal {
+    width: 500px;
+    height: 150px;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+
+    text-decoration: none;
+    font-family: "Lemon", serif;
+    font-weight: 50;
+    font-style: normal;
+    font-size: 30px;
+    color: #ffffff;
+
+    /* FORMA DE BOTON */
+    border: 5px outset #20ce20;
+    background-color: #20b920;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.tablaAlimen{
+    border: solid 1px black;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+.cuadroSemanaAlimen {
+    background-color: #e4f3e4;
+    /* margin-bottom: 50px; */
+    padding: 15px;
+    border: solid 1px gray;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+.dataAlimentacion {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    height: 100px;
+    width: 450px;
+    margin-top: -35px;
+  
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+
+.btnOpcAlimento {
+    height: 60px;
+    width: 80px;
+    
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+   
+    border: 5px outset #20ce20d3;
+    background-color: #20b920d7;
+    border-radius: 30px;
 }

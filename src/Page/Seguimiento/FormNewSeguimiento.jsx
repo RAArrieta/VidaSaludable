@@ -1,11 +1,11 @@
-import { doc, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
+import { collection, doc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { DataContext } from "../../Component/DataContext/DataContext";
 
-const FormNewSeguimiento = ({ formOn, setFormOn, setSeguimientoActual }) => {
+const FormNewSeguimiento = ({ formOn, setFormOn }) => {
 
-  const { seguimiento } = useContext(DataContext);
+  const { seguimiento, setSeguimiento } = useContext(DataContext);
 
   const { register, handleSubmit } = useForm();
 
@@ -20,14 +20,18 @@ const FormNewSeguimiento = ({ formOn, setFormOn, setSeguimientoActual }) => {
         Fecha: serverTimestamp(),
       };
 
-      // Crear una referencia al documento con el ID deseado
       const seguimientoDocRef = doc(data, "Seguimiento", nuevoId.toString());
 
-      // Establecer el documento con los datos
       await setDoc(seguimientoDocRef, seguimientoConFecha);
 
       console.log("Datos enviados a Firebase correctamente");
       setFormOn(!formOn);
+      const seguimientoRef = collection(data, "Seguimiento");
+      const updatedSeguimiento = await getDocs(seguimientoRef).then((resp) => {
+        return resp.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      });
+      setSeguimiento(updatedSeguimiento);
+
 
     } catch (error) {
       console.error("Error al enviar datos a Firebase:", error);
