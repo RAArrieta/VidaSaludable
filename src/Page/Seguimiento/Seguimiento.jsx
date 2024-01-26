@@ -1,9 +1,9 @@
 import "./Seguimiento.css";
 import { useContext, useEffect, useState } from "react";
-import DetalleSeguimiento from "./DetalleSeguimiento";
-import OpcionesSeguimiento from "./OpcionesSeguimiento";
 import { DataContext } from "../../Component/DataContext/DataContext";
-import FormNewSeguimiento from "./FormNewSeguimiento";
+import DetalleSeguimiento from "../../Component/Seguimiento/DetalleSeguimiento";
+import OpcionesSeguimiento from "../../Component/Seguimiento/OpcionesSeguimiento";
+import FormNewSeguimiento from "../../Component/Seguimiento/FormNewSeguimiento";
 
 const Seguimiento = () => {
 

@@ -1,9 +1,8 @@
 import { useState } from "react";
 import ModificarDia from "./ModificarDia";
-import Guarnicion from "./Guarnicion";
+import SelectGuarnicion from "./SelectGuarnicion";
 
-
-const Modificar = ({ comidaSemanal, setComidaSemanal, modificarOn, guarnicionOn }) => {
+const SelectDay = ({ comidaSemanal, setComidaSemanal, modificarOn, guarnicionOn }) => {
     const [opcionSeleccionada, setOpcionSeleccionada] = useState('');
 
     const handleSelectChange = (event) => {
@@ -23,9 +22,9 @@ const Modificar = ({ comidaSemanal, setComidaSemanal, modificarOn, guarnicionOn 
             </select>
 
             {(opcionSeleccionada && modificarOn) && <ModificarDia opcionSeleccionada={opcionSeleccionada} setOpcionSeleccionada={setOpcionSeleccionada} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
-            {(opcionSeleccionada && guarnicionOn) && <Guarnicion opcionSeleccionada={opcionSeleccionada} setOpcionSeleccionada={setOpcionSeleccionada} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
+            {(opcionSeleccionada && guarnicionOn) && <SelectGuarnicion opcionSeleccionada={opcionSeleccionada} setOpcionSeleccionada={setOpcionSeleccionada} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
         </div>
     );
 }
 
-export default Modificar
+export default SelectDay

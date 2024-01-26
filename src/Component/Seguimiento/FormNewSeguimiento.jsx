@@ -1,7 +1,7 @@
 import { collection, doc, getDocs, getFirestore, serverTimestamp, setDoc } from "firebase/firestore";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { DataContext } from "../../Component/DataContext/DataContext";
+import { DataContext } from "../DataContext/DataContext";
 
 const FormNewSeguimiento = ({ formOn, setFormOn }) => {
 

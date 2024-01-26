@@ -1,6 +1,5 @@
-import Counter from "../../Component/Counter/Counter";
-import "./Ejercicios.css"
 import { useState } from "react";
+import Counter from "../Counter/Counter";
 import Series from "./Series";
 
 const Ejercicio = ({ id, estado }) => {
@@ -8,31 +7,19 @@ const Ejercicio = ({ id, estado }) => {
     const [serieOn, setSerieOn] = useState(false);
     const [estadoContador, setEstadoContador] = useState(estado);
 
-    const handleToggle = () => {
-        setEjercicioOn(!ejercicioOn);
-    };
-
-    const handleToggleOnSerie = () => {
-        setSerieOn(!serieOn)
-    }
-
-    const handleCounterChange = (newState) => {
-        setEstadoContador(newState);
-      };
-
     return (
         <div>
-            <button onClick={handleToggle} className="btnEjercicios">
+            <button onClick={()=>setEjercicioOn(!ejercicioOn)} className="btnEjercicios">
                 <div>{`${id}`}</div>
             </button>
             {ejercicioOn && (
                 <div>
                     <div className={ejercicioOn ? (serieOn ? "dataSerie2" : "dataSerie") : ""}>
                         <div className="diaEstado">Día {`${estadoContador}`}</div>
-                        <button onClick={handleToggleOnSerie} className="btnOpcEjercicios">
+                        <button onClick={()=>setSerieOn(!serieOn)} className="btnOpcEjercicios">
                             Series
                         </button>
-                        <Counter id={id} estadoContador={estadoContador} onCounterChange={handleCounterChange} />
+                        <Counter id={id} estadoContador={estadoContador} onCounterChange={(newState) => setEstadoContador(newState)} />
                     </div>
                    {(serieOn) && (<Series id={id} estadoContador={estadoContador} />)}
                 </div>

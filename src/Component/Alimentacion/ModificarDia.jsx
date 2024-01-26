@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { DataContext } from '../../Component/DataContext/DataContext';
+import { useContext, useState, useEffect } from 'react';
+import { DataContext } from '../DataContext/DataContext';
 
 const ModificarDia = ({ opcionSeleccionada, setOpcionSeleccionada, comidaSemanal, setComidaSemanal, setModificarOn }) => {
     const { alimentos } = useContext(DataContext);

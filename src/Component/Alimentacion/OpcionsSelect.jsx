@@ -1,6 +1,4 @@
-
-
-const OpcionesAlimentacion = ({semanaAlimen, semanaActual, setSemanaActual, newSemanaOn, setNewSemanaOn}) => {
+const OpcionsSelect = ({semanaAlimen, semanaActual, setSemanaActual, newSemanaOn, setNewSemanaOn}) => {
 
     const index = setSemanaActual ? semanaAlimen.findIndex((el) => el.id === semanaActual.id) : -1;
 
@@ -24,4 +22,4 @@ const OpcionesAlimentacion = ({semanaAlimen, semanaActual, setSemanaActual, newS
   )
 }
 
-export default OpcionesAlimentacion
+export default OpcionsSelect

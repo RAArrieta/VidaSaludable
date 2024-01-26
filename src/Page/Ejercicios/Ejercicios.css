@@ -105,3 +105,11 @@
   letter-spacing: 5px; 
   word-spacing: 10px;
 }
+
+.rondas {
+  margin-bottom: 10px;
+  font-family: "Lemon", serif;
+  font-weight: 30;
+  font-style: normal;
+  font-size: 15px;
+}

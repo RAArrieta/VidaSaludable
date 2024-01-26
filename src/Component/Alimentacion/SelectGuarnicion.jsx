@@ -1,8 +1,7 @@
 import { useContext, useEffect, useState } from "react"
-import { DataContext } from "../../Component/DataContext/DataContext"
+import { DataContext } from "../DataContext/DataContext"
 
-
-const Guarnicion = ({ opcionSeleccionada, comidaSemanal, setComidaSemanal, setOpcionSeleccionada}) => {
+const SelectGuarnicion = ({ opcionSeleccionada, setComidaSemanal, setOpcionSeleccionada}) => {
 
     const { alimentos } = useContext(DataContext)
     const [opcionGuarnicion, setOpcionGuarnicion] = useState("")
@@ -37,4 +36,4 @@ const Guarnicion = ({ opcionSeleccionada, comidaSemanal, setComidaSemanal, setOp
     )
 }
 
-export default Guarnicion
+export default SelectGuarnicion

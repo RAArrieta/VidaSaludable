@@ -1,4 +1,5 @@
-import Ejercicio from "./Ejercicio";
+import "./Ejercicios.css"
+import Ejercicio from "../../Component/Ejercicios/Ejercicio";
 import { useContext } from "react";
 import { DataContext } from "../../Component/DataContext/DataContext";
 

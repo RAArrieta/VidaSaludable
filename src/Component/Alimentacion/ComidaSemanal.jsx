@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { DataContext } from '../../Component/DataContext/DataContext'
+import { useContext, useEffect, useState } from 'react';
+import { DataContext } from '../DataContext/DataContext';
 import { collection, doc, getDocs, setDoc } from 'firebase/firestore';
-import data from '../../Component/Firebase/Config';
-import Modificar from './Modificar';
+import data from '../Firebase/Config';
+import SelectDay from './SelectDay';
 
-const Almuerzos = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
+const ComidaSemanal = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
 
     const { alimentos, setSemanaAlimen } = useContext(DataContext)
     const [comidaSemanal, setComidaSemanal] = useState([]);
@@ -31,7 +31,6 @@ const Almuerzos = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
             updateStateIfNotEmpty('Viernes', alimentos[3]);
             updateStateIfNotEmpty('Sabado', alimentos[6]);
         };
-
         updateComidaSemanal();
     }, [alimentos]);
 
@@ -73,12 +72,12 @@ const Almuerzos = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
                 <button className="btnOpcAlimento btnOpc" onClick={() => { setModificarOn(!modificarOn) }}>Modificar</button>
                 <button className="btnOpcAlimento" onClick={aceptarSemana}>Aceptar</button>
             </div>
-            {modificarOn && <Modificar modificarOn={modificarOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
-            {guarnicionOn && <Modificar guarnicionOn={guarnicionOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
+            {modificarOn && <SelectDay modificarOn={modificarOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
+            {guarnicionOn && <SelectDay guarnicionOn={guarnicionOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
         </div>
     )
 }
 
-export default Almuerzos
+export default ComidaSemanal
 
 

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DataContext } from "../../Component/DataContext/DataContext";
+import { DataContext } from "../DataContext/DataContext";
 
 const OpcionesSeguimiento = ({ seguimientoOn, seguimientoActual, setSeguimientoActual, formOn, setFormOn }) => {
 
