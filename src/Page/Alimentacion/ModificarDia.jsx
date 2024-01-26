@@ -38,7 +38,7 @@ const ModificarDia = ({ opcionSeleccionada, setOpcionSeleccionada, comidaSemanal
 
     return (
         <div>
-            <select id="miSelect" value={comidaSemanal[opcionSeleccionada] || ''} onChange={handleSelectChange}>
+            <select className='selectAliment' id="miSelect" value={comidaSemanal[opcionSeleccionada] || ''} onChange={handleSelectChange}>
                 <option value="">Selecciona..</option>
                 {Object.values(opcionesAlimento[opcionSeleccionada] || {}).map((alimento, index) => (
                     <option key={index} value={alimento}>
@@ -46,8 +46,6 @@ const ModificarDia = ({ opcionSeleccionada, setOpcionSeleccionada, comidaSemanal
                     </option>
                 ))}
             </select>
-
-            <p>Selecciono: {comidaSemanal[opcionSeleccionada]} para el {opcionSeleccionada}</p>
         </div>
     );
 };

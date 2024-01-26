@@ -90,4 +90,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+    width: 400px;
+    height: 250px;
+    margin-bottom: 40px;
+    border: solid black 1px;
+}
+
+/* TAMAÑOS DE INPUTS */
+.inputSeguimiento {
+    width: 300px;
+    height: 25px;
 }

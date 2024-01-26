@@ -35,12 +35,12 @@ const Almuerzos = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
         updateComidaSemanal();
     }, [alimentos]);
 
-    useEffect(()=>{
+    useEffect(() => {
         if (guarnicionOn && modificarOn) {
             setModificarOn(false);
             setGuarnicionOn(false);
         }
-    },[guarnicionOn, modificarOn])
+    }, [guarnicionOn, modificarOn])
 
     const aceptarSemana = async () => {
         try {
@@ -68,9 +68,11 @@ const Almuerzos = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
             <div className="tablaAlimen">{`Jueves: ${comidaSemanal.Jueves}`}</div>
             <div className="tablaAlimen">{`Viernes: ${comidaSemanal.Viernes}`}</div>
             <div className="tablaAlimen">{`Sabado: ${comidaSemanal.Sabado}`}</div>
-            <button className="btnOpcAlimento" onClick={()=>setGuarnicionOn(!guarnicionOn)}>Guarnición</button>
-            <button className="btnOpcAlimento" onClick={()=>{setModificarOn(!modificarOn)}}>Modificar</button>
-            <button className="btnOpcAlimento" onClick={aceptarSemana}>Aceptar</button>
+            <div className='container_btnOpc'>
+                <button className="btnOpcAlimento btnOpc" onClick={() => setGuarnicionOn(!guarnicionOn)}>Guarnición</button>
+                <button className="btnOpcAlimento btnOpc" onClick={() => { setModificarOn(!modificarOn) }}>Modificar</button>
+                <button className="btnOpcAlimento" onClick={aceptarSemana}>Aceptar</button>
+            </div>
             {modificarOn && <Modificar modificarOn={modificarOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
             {guarnicionOn && <Modificar guarnicionOn={guarnicionOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
         </div>

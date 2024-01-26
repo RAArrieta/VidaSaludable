@@ -12,7 +12,7 @@ const Modificar = ({ comidaSemanal, setComidaSemanal, modificarOn, guarnicionOn 
 
     return (
         <div>
-            <select id="miSelect" value={opcionSeleccionada} onChange={handleSelectChange}>
+            <select className='selectAliment' id="miSelect" value={opcionSeleccionada} onChange={handleSelectChange}>
                 <option value="">Selcciona un día</option>
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>

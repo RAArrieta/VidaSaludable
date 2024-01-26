@@ -25,7 +25,7 @@ const Guarnicion = ({ opcionSeleccionada, comidaSemanal, setComidaSemanal, setOp
 
     return (
         <div>
-            <select id="miSelect" value={opcionGuarnicion} onChange={handleSelectChange}>
+            <select className='selectAliment' id="miSelect" value={opcionGuarnicion} onChange={handleSelectChange}>
                 <option value="">Selecciona..</option>
                 {arrayGuarniciones.map((guarnicion, index) => (
                     <option key={index} value={guarnicion}>
@@ -33,8 +33,6 @@ const Guarnicion = ({ opcionSeleccionada, comidaSemanal, setComidaSemanal, setOp
                     </option>
                 ))}
             </select>
-
-            <p>Selecciono: {opcionGuarnicion} para el {opcionSeleccionada}</p>
         </div>
     )
 }
