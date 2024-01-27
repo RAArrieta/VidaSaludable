@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/VidaSaludable/static/css/main.7c99cdef.css",
+    "main.css": "/VidaSaludable/static/css/main.d0ca6b7e.css",
     "main.js": "/VidaSaludable/static/js/main.edc45730.js",
     "static/media/vidaSaludable.png": "/VidaSaludable/static/media/vidaSaludable.e2cadafcc5794ec61b48.png",
     "index.html": "/VidaSaludable/index.html",
-    "main.7c99cdef.css.map": "/VidaSaludable/static/css/main.7c99cdef.css.map",
+    "main.d0ca6b7e.css.map": "/VidaSaludable/static/css/main.d0ca6b7e.css.map",
     "main.edc45730.js.map": "/VidaSaludable/static/js/main.edc45730.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c99cdef.css",
+    "static/css/main.d0ca6b7e.css",
     "static/js/main.edc45730.js"
   ]
 }
