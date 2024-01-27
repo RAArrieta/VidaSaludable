@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <DataProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/VidaSaludable">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
