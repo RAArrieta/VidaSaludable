@@ -7,7 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 70px;
+    /* row-gap: 70px; */
+    margin-top: 50px
 }
 
 .btnHome {
@@ -30,8 +31,8 @@
     color: #ffffff;
 
     /* FORMA DE BOTON */
-    border: 5px outset #20ce20;
-    background-color: #20b920;
+    border: 5px outset #06a794;
+    background-color: #00796b;
     border-radius: 15px;
     cursor: pointer;
     /* box-shadow: 0 6px 12px rgba(0, 0, 0, 1); */

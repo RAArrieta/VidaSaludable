@@ -27,8 +27,8 @@
     color: #ffffff;
 
     /* FORMA DE BOTON */
-    border: 5px outset #20ce20;
-    background-color: #20b920;
+    border: 5px outset #06a794;
+    background-color: #00796b;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -67,8 +67,8 @@
     font-size: 15px;
     font-weight: bold;
    
-    border: 5px outset #20ce20d3;
-    background-color: #20b920d7;
+    border: 5px outset #09dfc6;
+    background-color: #07b39f;
     border-radius: 30px;
   }
 
