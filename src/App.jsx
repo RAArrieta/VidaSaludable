@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Component/Header/Header";
 import Home from "./Page/Home/Home";
 import Ejercicios from "./Page/Ejercicios/Ejercicios";
@@ -13,10 +13,10 @@ function App() {
       <BrowserRouter basename="/VidaSaludable">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ejercicios" element={<Ejercicios />} />
-          <Route path="/alimentacion" element={<Alimentacion />} />
-          <Route path="/seguimiento" element={<Seguimiento />} />
+          <Route path="#" element={<Home />} />
+          <Route path="#ejercicios" element={<Ejercicios />} />
+          <Route path="#alimentacion" element={<Alimentacion />} />
+          <Route path="#seguimiento" element={<Seguimiento />} />
         </Routes>
       </BrowserRouter>
     </DataProvider>
