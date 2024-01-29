@@ -1,4 +1,3 @@
-// import "./Seguimiento.css";
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../Component/DataContext/DataContext";
 import DetalleSeguimiento from "../../Component/Seguimiento/DetalleSeguimiento";

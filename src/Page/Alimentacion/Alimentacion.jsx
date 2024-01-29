@@ -1,4 +1,3 @@
-// import "./Alimentacion.css"
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../Component/DataContext/DataContext";
 import OpcionsSelect from "../../Component/Alimentacion/OpcionsSelect";
@@ -18,10 +17,12 @@ const Alimentacion = () => {
 
   return (
     <div className="fondo">
-      <button className="btnPrincipal" onClick={() => setOptionSelectOn(!optionSelectOn)}>Comida semanal</button>
-      {optionSelectOn && <OpcionsSelect semanaAlimen={semanaAlimen} semanaActual={semanaActual} setSemanaActual={setSemanaActual} newSemanaOn={newSemanaOn} setNewSemanaOn={setNewSemanaOn} />}
-      {newSemanaOn && <ComidaSemanal semanaActual={semanaActual} newSemanaOn={newSemanaOn} setNewSemanaOn={setNewSemanaOn} />}
-      <DetalleAlimentos semanaActual={semanaActual} />
+      <div className="flex_container_opciones">
+        <button className="btnPrincipal" onClick={() => setOptionSelectOn(!optionSelectOn)}>Comida semanal</button>
+        {optionSelectOn && <OpcionsSelect semanaAlimen={semanaAlimen} semanaActual={semanaActual} setSemanaActual={setSemanaActual} newSemanaOn={newSemanaOn} setNewSemanaOn={setNewSemanaOn} />}
+        {newSemanaOn && <ComidaSemanal semanaActual={semanaActual} newSemanaOn={newSemanaOn} setNewSemanaOn={setNewSemanaOn} />}
+        <DetalleAlimentos semanaActual={semanaActual} />
+      </div>
     </div>
 
   )

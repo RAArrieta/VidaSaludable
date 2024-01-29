@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Counter from "../Counter/Counter";
+import Counter from "./Counter";
 import Series from "./Series";
 
 const Ejercicio = ({ id, estado }) => {
@@ -8,7 +8,7 @@ const Ejercicio = ({ id, estado }) => {
     const [estadoContador, setEstadoContador] = useState(estado);
 
     return (
-        <div>
+        <div className="flex_container_opciones">
             <button onClick={()=>setEjercicioOn(!ejercicioOn)} className="btnPrincipal">
                 <div>{`${id}`}</div>
             </button>

@@ -10,8 +10,8 @@ const SelectDay = ({ comidaSemanal, setComidaSemanal, modificarOn, guarnicionOn 
     };
 
     return (
-        <div>
-            <select className='selectAliment' id="miSelect" value={opcionSeleccionada} onChange={handleSelectChange}>
+        <div className="flex_select">
+            <select className='selectAliment selectDay' id="miSelect" value={opcionSeleccionada} onChange={handleSelectChange}>
                 <option value="">Selcciona un día</option>
                 <option value="Lunes">Lunes</option>
                 <option value="Martes">Martes</option>
