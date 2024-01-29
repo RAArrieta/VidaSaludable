@@ -1,6 +1,16 @@
 body {
     background-color: #dcedc8;
 }
+.header {
+    /* TAMAÑO DE HEADER Y COLOR*/
+    width: 720px;
+    height: 300px;
+    
+    /* CENTRADO DE TEXTO */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* FONDO DE CADA PAGINA */
 .fondo {
