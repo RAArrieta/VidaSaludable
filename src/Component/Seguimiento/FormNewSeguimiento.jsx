@@ -47,7 +47,7 @@ const FormNewSeguimiento = ({ formOn, setFormOn }) => {
       <input className="inputSeguimiento" type="text" placeholder="Medida de cintura..." {...register("Cintura")} required />
       <input className="inputSeguimiento" type="text" placeholder="Medida de cadera..." {...register("Cadera")} required />
 
-      <button className="btnOpcSeguimiento" type="submit">Ingresar</button>
+      <button className="btn_container_opciones" type="submit">Ingresar</button>
 
     </form>
   )

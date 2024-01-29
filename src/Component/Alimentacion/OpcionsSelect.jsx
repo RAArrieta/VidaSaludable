@@ -14,10 +14,10 @@ const OpcionsSelect = ({semanaAlimen, semanaActual, setSemanaActual, newSemanaOn
     }
 
   return (
-    <div className='dataAlimentacion'>
-      <button className="btnOpcAlimento" onClick={backSemAlimentos}>Back</button>
-      <button className="btnOpcAlimento" onClick={upSemAlimentos}>Up</button>
-      <button className="btnOpcAlimento btnOpc" onClick={()=>setNewSemanaOn(!newSemanaOn)}>Nueva Semana</button>
+    <div className='container_opciones'>
+      <button className="btn_container_opciones" onClick={backSemAlimentos}>Back</button>
+      <button className="btn_container_opciones" onClick={upSemAlimentos}>Up</button>
+      <button className="btn_container_opciones btnOpc" onClick={()=>setNewSemanaOn(!newSemanaOn)}>Nueva Semana</button>
     </div>
   )
 }

@@ -25,10 +25,10 @@ const Counter = ({ id, estadoContador, onCounterChange }) => {
 
   return (
     <>
-      <button onClick={onSubstractId} className="btnOpcEjercicios">
+      <button onClick={onSubstractId} className="btn_container_opciones">
         Back
       </button>
-      <button onClick={onAddId} className="btnOpcEjercicios">
+      <button onClick={onAddId} className="btn_container_opciones">
         Ok
       </button>
     </>

@@ -25,10 +25,10 @@ const OpcionesSeguimiento = ({ seguimientoOn, seguimientoActual, setSeguimientoA
         <>
             {
                 seguimientoOn &&
-                <div className="dataSeguimiento">
-                    <button className="btnOpcSeguimiento" onClick={btnBackSeguimiento}>Back</button>
-                    <button className="btnOpcSeguimiento" onClick={btnUpSeguimiento}>Up</button>
-                    <button className="btnOpcSeguimiento" onClick={btnCargarSeguimiento}>Cargar</button>
+                <div className="container_opciones">
+                    <button className="btn_container_opciones" onClick={btnBackSeguimiento}>Back</button>
+                    <button className="btn_container_opciones" onClick={btnUpSeguimiento}>Up</button>
+                    <button className="btn_container_opciones" onClick={btnCargarSeguimiento}>Cargar</button>
                 </div>
             }
         </>

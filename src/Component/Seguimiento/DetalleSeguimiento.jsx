@@ -9,12 +9,12 @@ const DetalleSeguimiento = ({ seguimientoActual }) => {
     return (
         <div>
             {seguimientoActual && (
-                <div className="cuadroSeguimientoActual">
-                    <div className="tablaSeguimiento">{`Fecha: ${obtenerFecha(seguimientoActual.Fecha)}`}</div>
-                    <div className="tablaSeguimiento">{`Peso: ${seguimientoActual.Peso}`}</div>
-                    <div className="tablaSeguimiento">{`Pecho: ${seguimientoActual.Pecho}`}</div>
-                    <div className="tablaSeguimiento">{`Cintura: ${seguimientoActual.Cintura}`}</div>
-                    <div className="tablaSeguimiento">{`Cadera: ${seguimientoActual.Cadera}`}</div>
+                <div className="container_tabla">
+                    <div className="tabla">{`Fecha: ${obtenerFecha(seguimientoActual.Fecha)}`}</div>
+                    <div className="tabla">{`Peso: ${seguimientoActual.Peso}`}</div>
+                    <div className="tabla">{`Pecho: ${seguimientoActual.Pecho}`}</div>
+                    <div className="tabla">{`Cintura: ${seguimientoActual.Cintura}`}</div>
+                    <div className="tabla">{`Cadera: ${seguimientoActual.Cadera}`}</div>
                 </div>
             )}
         </div>

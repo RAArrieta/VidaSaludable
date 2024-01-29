@@ -60,17 +60,17 @@ const ComidaSemanal = ({ semanaActual, newSemanaOn, setNewSemanaOn }) => {
     };
 
     return (
-        <div className="cuadroSemanaAlimen">
-            <div className="tablaAlimen">{`Lunes: ${comidaSemanal.Lunes}`}</div>
-            <div className="tablaAlimen">{`Martes: ${comidaSemanal.Martes}`}</div>
-            <div className="tablaAlimen">{`Miercoles: ${comidaSemanal.Miercoles}`}</div>
-            <div className="tablaAlimen">{`Jueves: ${comidaSemanal.Jueves}`}</div>
-            <div className="tablaAlimen">{`Viernes: ${comidaSemanal.Viernes}`}</div>
-            <div className="tablaAlimen">{`Sabado: ${comidaSemanal.Sabado}`}</div>
+        <div className="container_tabla">
+            <div className="tabla">{`Lunes: ${comidaSemanal.Lunes}`}</div>
+            <div className="tabla">{`Martes: ${comidaSemanal.Martes}`}</div>
+            <div className="tabla">{`Miercoles: ${comidaSemanal.Miercoles}`}</div>
+            <div className="tabla">{`Jueves: ${comidaSemanal.Jueves}`}</div>
+            <div className="tabla">{`Viernes: ${comidaSemanal.Viernes}`}</div>
+            <div className="tabla">{`Sabado: ${comidaSemanal.Sabado}`}</div>
             <div className='container_btnOpc'>
-                <button className="btnOpcAlimento btnOpc" onClick={() => setGuarnicionOn(!guarnicionOn)}>Guarnición</button>
-                <button className="btnOpcAlimento btnOpc" onClick={() => { setModificarOn(!modificarOn) }}>Modificar</button>
-                <button className="btnOpcAlimento" onClick={aceptarSemana}>Aceptar</button>
+                <button className="btn_container_opciones btnOpc" onClick={() => setGuarnicionOn(!guarnicionOn)}>Guarnición</button>
+                <button className="btn_container_opciones btnOpc" onClick={() => { setModificarOn(!modificarOn) }}>Modificar</button>
+                <button className="btn_container_opciones" onClick={aceptarSemana}>Aceptar</button>
             </div>
             {modificarOn && <SelectDay modificarOn={modificarOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}
             {guarnicionOn && <SelectDay guarnicionOn={guarnicionOn} comidaSemanal={comidaSemanal} setComidaSemanal={setComidaSemanal} />}

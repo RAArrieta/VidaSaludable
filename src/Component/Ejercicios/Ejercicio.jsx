@@ -9,14 +9,14 @@ const Ejercicio = ({ id, estado }) => {
 
     return (
         <div>
-            <button onClick={()=>setEjercicioOn(!ejercicioOn)} className="btnEjercicios">
+            <button onClick={()=>setEjercicioOn(!ejercicioOn)} className="btnPrincipal">
                 <div>{`${id}`}</div>
             </button>
             {ejercicioOn && (
                 <div>
-                    <div className={ejercicioOn ? (serieOn ? "dataSerie2" : "dataSerie") : ""}>
-                        <div className="diaEstado">Día {`${estadoContador}`}</div>
-                        <button onClick={()=>setSerieOn(!serieOn)} className="btnOpcEjercicios">
+                    <div className="container_opciones">
+                        <div>Día {`${estadoContador}`}</div>
+                        <button onClick={()=>setSerieOn(!serieOn)} className="btn_container_opciones">
                             Series
                         </button>
                         <Counter id={id} estadoContador={estadoContador} onCounterChange={(newState) => setEstadoContador(newState)} />

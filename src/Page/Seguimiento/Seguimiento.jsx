@@ -1,4 +1,4 @@
-import "./Seguimiento.css";
+// import "./Seguimiento.css";
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../Component/DataContext/DataContext";
 import DetalleSeguimiento from "../../Component/Seguimiento/DetalleSeguimiento";
@@ -18,8 +18,8 @@ const Seguimiento = () => {
   }, [seguimiento]);
 
   return (
-    <div className="seguimiento">
-      <button className="btnSeguimiento" onClick={() => setSeguimientoOn(!seguimientoOn)}>
+    <div className="fondo">
+      <button className="btnPrincipal" onClick={() => setSeguimientoOn(!seguimientoOn)}>
         <div>Seguimiento</div>
       </button>
       <OpcionesSeguimiento seguimientoOn={seguimientoOn} seguimientoActual={seguimientoActual} setSeguimientoActual={setSeguimientoActual} formOn={formOn} setFormOn={setFormOn} />

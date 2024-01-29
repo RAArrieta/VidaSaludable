@@ -11,15 +11,15 @@ const Series = ({ id, estadoContador }) => {
     const serieS = serieSent.find((el) => el.id === estadoContador.toString().padStart(2, '0'));
 
     return (
-        <div className="despliegueSerie">
+        <div className="container_tabla">
             {
                 (id === "Correr") && (
                     <>
-                        {(estadoContador <= 10) && <div className="rondas">5 rondas</div>}
-                        {(estadoContador > 10 && estadoContador <= 21) && <div className="rondas">4 rondas</div>}
-                        {(estadoContador > 21 && estadoContador <= 31) && <div className="rondas">3 rondas</div>}
-                        {(estadoContador > 31 && estadoContador <= 36) && <div className="rondas">2 rondas</div>}
-                        {(estadoContador > 36) && <div className="rondas">1 rondas</div>}
+                        {(estadoContador <= 10) && <div className="title_tabla">5 rondas</div>}
+                        {(estadoContador > 10 && estadoContador <= 21) && <div className="title_tabla">4 rondas</div>}
+                        {(estadoContador > 21 && estadoContador <= 31) && <div className="title_tabla">3 rondas</div>}
+                        {(estadoContador > 31 && estadoContador <= 36) && <div className="title_tabla">2 rondas</div>}
+                        {(estadoContador > 36) && <div className="title_tabla">1 rondas</div>}
                         <div className="tabla">
                             {`Carrera: ${serieC.Carrera}`}
                         </div>
