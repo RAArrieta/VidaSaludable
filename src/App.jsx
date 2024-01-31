@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Component/Header/Header";
 import Home from "./Page/Home/Home";
 import Ejercicios from "./Page/Ejercicios/Ejercicios";
@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <DataProvider>
-      <BrowserRouter basename="/VidaSaludable">
+      <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
           <Route path="/alimentacion" element={<Alimentacion />} />
           <Route path="/seguimiento" element={<Seguimiento />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </DataProvider>
   );
 }
