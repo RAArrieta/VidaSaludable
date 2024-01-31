@@ -1,3 +1,5 @@
+import DeleteComidaSemanal from "./DeleteComidaSemanal";
+
 const DetalleAlimentos = ({ semanaActual }) => {
   return (
     <div>
@@ -9,6 +11,7 @@ const DetalleAlimentos = ({ semanaActual }) => {
           <div className="tabla">{`Jueves: ${semanaActual.Jueves}`}</div>
           <div className="tabla">{`Viernes: ${semanaActual.Viernes}`}</div>
           <div className="tabla">{`Sabado: ${semanaActual.Sabado}`}</div>
+          <DeleteComidaSemanal semanaActual={semanaActual} />
         </div>
       )}
     </div>

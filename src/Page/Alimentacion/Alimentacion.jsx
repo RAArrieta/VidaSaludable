@@ -49,7 +49,7 @@ const Alimentacion = () => {
             setNewSemanaOn={setNewSemanaOn}
           />
         )}
-        <DetalleAlimentos semanaActual={semanaActual} />
+        <DetalleAlimentos semanaActual={semanaActual} setSemanaActual={setSemanaActual} />
       </div>
     </div>
   );

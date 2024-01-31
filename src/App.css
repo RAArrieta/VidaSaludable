@@ -1,6 +1,7 @@
 body {
   background-color: #dcedc8;
 }
+
 .header {
   /* TAMAÑO DE HEADER Y COLOR*/
   width: 720px;
@@ -92,15 +93,21 @@ body {
   background-color: #07b39f;
   border-radius: 30px;
 }
-
 .btnOpc {
   width: 100px;
 }
-
 .container_btnOpc {
   margin: 20px 20px;
   display: flex;
   column-gap: 10px;
+}
+.btnDelete {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+  margin: 10px 30px 0px 10px;
+
 }
 
 /* TABLA DE OPCIONES */
@@ -156,6 +163,7 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+
 .selectAliment {
   appearance: none;
   width: 300px;
@@ -172,4 +180,28 @@ body {
 }
 .selectDay {
   width: 150px;
+}
+
+.container_cronometro {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.cronometro {
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 5px;
+  width: 120px;
+  height: 60px;
+
+  font-family: "Lemon", serif;
+  font-weight: 30;
+  font-style: normal;
+  font-size: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
