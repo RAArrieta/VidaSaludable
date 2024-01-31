@@ -3,18 +3,20 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 const FetchSeguimiento = () => {
+  const [seguimiento, setSeguimiento] = useState([]);
 
-    const [seguimiento, setSeguimiento] = useState([]);
+  useEffect(() => {
+    const seguimientoRef = collection(data, "Seguimiento");
+    getDocs(seguimientoRef).then((resp) => {
+      const seguimientoData = resp.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setSeguimiento(seguimientoData);
+    });
+  }, []);
 
-    useEffect(() => {
-        const seguimientoRef = collection(data, "Seguimiento");
-        getDocs(seguimientoRef).then((resp) => {
-            const seguimientoData = resp.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-            setSeguimiento(seguimientoData)
-        });
-    }, []);
+  return [seguimiento, setSeguimiento];
+};
 
-    return [seguimiento, setSeguimiento];
-}
-
-export default FetchSeguimiento
+export default FetchSeguimiento;

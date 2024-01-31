@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+  </head>
+  <body>
+    <script>
+      var pathSegments = location.pathname.split('/').filter(function (segment) {
+        return segment !== '';
+      });
+
+      if (pathSegments.length > 0) {
+        location.replace('/VidaSaludable/' + pathSegments.join('/') + location.search + location.hash);
+      } else {
+        location.replace('/VidaSaludable/' + location.search + location.hash);
+      }
+    </script>
+  </body>
+</html>
