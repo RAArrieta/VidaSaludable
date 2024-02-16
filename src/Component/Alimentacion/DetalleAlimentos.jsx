@@ -2,7 +2,7 @@ import DeleteComidaSemanal from "./DeleteComidaSemanal";
 
 const DetalleAlimentos = ({ semanaActual }) => {
   return (
-    <div>
+    <>
       {semanaActual && (
         <div className="container_tabla">
           <div className="tabla">{`Lunes: ${semanaActual.Lunes}`}</div>
@@ -14,7 +14,7 @@ const DetalleAlimentos = ({ semanaActual }) => {
           <DeleteComidaSemanal semanaActual={semanaActual} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

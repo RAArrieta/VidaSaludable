@@ -21,7 +21,7 @@ const Ejercicio = ({ id, estado }) => {
         <div>{`${id}`}</div>
       </button>
       {ejercicioOn && (
-        <div>
+        <>
           <div className="container_opciones">
             <div>Día {`${estadoContador}`}</div>
             {/* Este boton permite desplegar las series de los ejercicios */}
@@ -41,7 +41,7 @@ const Ejercicio = ({ id, estado }) => {
           </div>
           {/* Si presiono el boton Series despliego la serie del día */}
           {serieOn && <Series id={id} estadoContador={estadoContador} />}
-        </div>
+        </>
       )}
     </div>
   );

@@ -4,8 +4,8 @@ body {
 
 .header {
   /* TAMAÑO DE HEADER Y COLOR*/
-  width: 720px;
-  height: 300px;
+  width: 100%;
+  /* height: 300px; */
 
   /* CENTRADO DE TEXTO */
   display: flex;
@@ -16,23 +16,22 @@ body {
 /* FONDO DE CADA PAGINA */
 .fondo {
   /* TAMAÑO DE HOME Y COLOR DE FONDO */
-  width: 720px;
-  height: 1060px;
+  width: 100%;
+
 
   /* CENTRADO DE ITEMS */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* row-gap: 70px; */
-  margin-top: 50px;
+  /* margin-top: 30px; */
 }
 
 /* BOTONES PRINCIPALES DE CADA PAGINA */
 .btnPrincipal {
   /* TAMAÑO Y SEPARACION DE BOTONES */
-  width: 500px;
-  height: 150px;
-  margin: 60px;
+  width: 66%;
+  height: 100px;
+  margin: 40px;
 
   /* CENTRADO DE TEXTO */
   display: flex;
@@ -42,9 +41,9 @@ body {
   /* LETRA DE BOTON */
   text-decoration: none;
   font-family: "Lemon", serif;
-  font-weight: 80;
+  font-weight: 60;
   font-style: normal;
-  font-size: 35px;
+  font-size: 20px;
   color: #ffffff;
 
   /* FORMA DE BOTON */
@@ -61,20 +60,21 @@ body {
   justify-content: space-evenly;
   align-items: center;
 
-  height: 100px;
-  width: 480px;
+  height: 80px;
+  width: 60%;
   margin-top: -35px;
 
   border: 1px solid gray;
   border-radius: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   font-family: "Lemon", serif;
   font-weight: 60;
   font-style: normal;
-  font-size: 30px;
+  font-size: 15px;
 }
 .flex_container_opciones {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,11 +82,11 @@ body {
 
 /* BOTONES DE OPCIONES */
 .btn_container_opciones {
-  height: 60px;
-  width: 80px;
+  height: 40px;
+  width: 22%;
 
   color: white;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: bold;
 
   border: 5px outset #09dfc6;
@@ -121,16 +121,17 @@ body {
 }
 
 .container_tabla {
+  width: 85%;
   background-color: white;
-  margin-bottom: 50px;
   padding: 15px;
+  margin-bottom: 20px;
   border: solid 1px gray;
   border-radius: 0px 0px 5px 5px;
 }
 
 .tabla {
   border: solid 1px black;
-  font-size: 20px;
+  font-size: 10px;
   padding: 5px;
   text-align: center;
   letter-spacing: 5px;
@@ -147,14 +148,14 @@ body {
   row-gap: 15px;
   padding: 15px 15px;
 
-  width: 400px;
+  width: 50%;
   height: 250px;
   margin-bottom: 40px;
   border: solid black 1px;
 }
 
 .inputSeguimiento {
-  width: 300px;
+  width: 90%;
   height: 25px;
 }
 

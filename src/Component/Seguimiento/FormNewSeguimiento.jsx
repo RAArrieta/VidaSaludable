@@ -78,7 +78,7 @@ const FormNewSeguimiento = ({ formOn, setFormOn }) => {
         required
       />
 
-      <button className="btn_container_opciones" type="submit">
+      <button className="btn_container_opciones btnOpc" type="submit">
         Ingresar
       </button>
     </form>

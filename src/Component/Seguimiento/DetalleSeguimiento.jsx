@@ -6,7 +6,7 @@ const DetalleSeguimiento = ({ seguimientoActual }) => {
   };
 
   return (
-    <div>
+    <>
       {seguimientoActual && (
         <div className="container_tabla">
           <div className="tabla">{`Fecha: ${obtenerFecha(
@@ -18,7 +18,7 @@ const DetalleSeguimiento = ({ seguimientoActual }) => {
           <div className="tabla">{`Cadera: ${seguimientoActual.Cadera}`}</div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
